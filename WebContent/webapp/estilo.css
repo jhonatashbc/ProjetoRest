@@ -1,0 +1,132 @@
+@CHARSET "UTF-8";
+body {
+    font-family: "Lato", sans-serif;
+}
+table{
+	margin: 20px;
+	text-align: center;
+}
+thead tr{
+	background-color: #8e9cdb;
+	border-bottom-style: solid;
+	border-bottom-width: 10px;
+}
+
+tbody tr:hover{
+	background-color: #919191;
+	
+}
+tr{
+	padding-right: 10px;
+	margin:10px;
+	margin-right: 5px;
+}
+label{
+	padding: 10px;
+}
+select{	
+	margin: 10px;
+}
+#table_paginate{
+	padding-left: 10px;
+}
+#table_paginate a{
+	margin:5px;
+	padding: 5px;
+	border: 10px;	
+	background-color: #9aacf9;
+}
+#table_info{
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+#table_paginate a:hover{
+	background-color: #919191;
+}
+#table_filter label input{
+	margin-left: 5px;
+}
+#table_length{
+	margin-left: 10px;
+}
+#table_filter{
+	margin-left: 10px;
+}
+#btnGuardar{
+	background-color: #9aacf9;
+	border: thick;
+}
+#btnGuardar:hover{
+	background-color: #8ca0f8
+}
+#btnVoltar{
+	background-color: #9aacf9;
+	border: thick;
+}
+#btnVoltar:hover{
+	background-color: #8ca0f8
+}
+.divtabela{ 
+	width: 100%;
+	font-size: 18px;
+}
+.divtabela form table tr td{ 
+	background-color: #9aacf9;
+}
+.divtitulo{
+	
+}
+.cabecalho{
+	width: 100%;
+	height: 15%;
+	background-color: #6d88ff;
+}
+.cabecalho h1{
+	text-align: center;
+}
+.rodape{
+	position:absolute;
+	bottom: 0;
+	background-color: #6d88ff;
+	width: 100%;
+	height: 40px;
+}
+/* The sidebar menu */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #6d88ff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

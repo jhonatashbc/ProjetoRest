@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="UTF-8">
+ <script src="jquery.min.js"></script>
+ <script type="text/javascript" src="jquery.dataTables.min.js"></script>
+ <script src="principal.js"></script>
+ <link rel="stylesheet" href="estilo.css">
+  <title>Principal</title>
+ </head>
+<body onload="popularTabela();" >
+	<div id="mySidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a wm-menu="http://localhost:8080/ProjetoRest/webapp/create_pessoa.html" onclick="escrever(this);" href="#">Cadastro</a>
+	  <a wm-menu="http://localhost:8080/ProjetoRest/webapp/tabela.html" onclick="escrever(this); popularTabela();" href="#">Tabela</a>
+	  <a wm-menu="" href="#">Clients</a>
+	  <a wm-menu="" href="#">Contact</a>
+	</div>
+	<div id="conteudo">
+		<div class="cabecalho">
+			<span style="font-size:50px;cursor:pointer; margin-left: 5px;" onclick="openNav()">&#9776;</span>
+			<hr>
+		</div>
+		<div id="divtabela" align="center" class="divtabela">
+			<div class="divtitulo">
+				<h1>Tabela de Pessoas</h1>
+				<hr>
+			</div>
+	    	<table  id="table" >
+	        
+	    	</table>
+	    </div>
+	    <hr>
+	    	<div align="center" class="rodape">
+	    		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nam.</p>
+	    </div>
+	 </div>
+	 
+	 <script>
+	    const selector = document.querySelectorAll('[wm-menu]');
+	    const conteudo = document.getElementById('divtabela'); //pega o elemento de id conteudo, no caso a section
+	    //for(link in selector){
+	      function escrever(e){
+	    	  	
+	            //e.preventDefault(); //previne o comportamento padrao do browser de ir direto ao link
+	
+	            fetch(e.getAttribute('wm-menu')) //faz um requisicao ajax no href do link
+	                //depois da promisse resolvida ele chama o then
+	                .then(resp => resp.text()) //pega o conteudo
+	                .then(html => conteudo.innerHTML = html) //atribui o conteudo no elemento que foi pego a id
+	        }
+	    //}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="estilo.css">
+<script src="principal.js"></script>
+<title>Cadastro de Pessoa</title>
+</head>
+<body>
+        <div class="cabecalho">
+                <h1 >Cadastro de Pessoa</h1>
+                <hr>
+            </div>
+        <div align="center" class="divtabela">
+            <form action="http://localhost:8080/ProjetoRest/rest/pessoas" method="POST">
+                <table>
+                    <tr>
+                        <td>ID</td>
+                        <td><input id="id" name="id" type="text" required="required"></td>
+                    </tr>
+                    <tr>
+                        <td>Nome</td>
+                        <td><input id="nome" name="nome" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>CPF</td>
+                        <td><input id="cpf" name="cpf" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>RG</td>
+                        <td><input id="rg" name="rg" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Número para Contato</td>
+                        <td><input id="numContato" name="numContato" type="text"></td>
+                    </tr>
+                </table>
+                <input id="btnGuardar" type="submit" value="Guardar" style="width:120px;" >
+                <input id="btnVoltar" type="button" value="Voltar" onclick="chamar();" style="width:120px;" >
+            </form>
+            
+        </div>
+       
+</body>
+</html>
